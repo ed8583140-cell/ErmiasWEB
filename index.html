@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+    <script src="https://kit.fontawesome.com/d7ea0e3c93.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+          
+      background-image:  linear-gradient(rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.500)), url(IMG/IMG_20250809_102718_093.jpg);
+   background-blend-mode:;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+background-position-x: -2px;
+background-position-y:0%;
+    transition: 0.4s
+       }
+       body.dark{
+      
+       }
+    </style>
+ </head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      
+  <a href="index.html"><div class="logo">Ermias</div></a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li> 
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div style="display:flex; align-items:center; gap:15px;">
+        <button class="theme-btn" id="themeToggle">
+         <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-text">
+      <div class="textcard">
+      <h1>Hello, I'm <span>Ermias</span></h1>
+      <p>
+        I am a student at Wolaita Sodo University, who is passionate about technology, 
+        programming, and learning new skills. I enjoy creating websites and exploring 
+        how computers communicate and work.
+      </p>
+      </div>
+    <div class="homecard">
+<a href="contact.html" class="homecard1">Contact</a>
+<a href="projects.html" class="homecard2">Projects</a>
+    </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/jeremi_8_24?igsh=anZ5ZXgxNWI5NDI1"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://t.me/jeremi_824"><i class="fa-brands fa-telegram"></i></a>
+        <a href="ed8583140@gmail.com"><i class="fa-solid fa-at"></i></a>
+        <a href="tel: +251941005107"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+    <p>© 2026 Ermias | All Rights Reserved</p>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>

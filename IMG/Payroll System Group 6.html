@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Payroll System Group 6.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+.cpp1-assembler { color: #0000FF; }
+.cpp1-character { color: #000000; }
+.cpp1-comment { color: #0078D7; font-style: italic; }
+.cpp1-float { color: #800080; }
+.cpp1-hexadecimal { color: #800080; }
+.cpp1-identifier { color: #000000; }
+.cpp1-illegalchar { color: #000000; }
+.cpp1-number { color: #800080; }
+.cpp1-octal { color: #800080; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { color: #000000; font-weight: bold; }
+.cpp1-space { background-color: #FFFFFF; color: #000000; }
+.cpp1-string { color: #0000FF; font-weight: bold; }
+.cpp1-symbol { color: #FF0000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 7pt Consolas;"><span class="cpp1-preprocessor">#include &lt;iostream&gt;
+#include &lt;string&gt;
+</span><span class="cpp1-reservedword">using</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">namespace</span><span class="cpp1-space"> std</span><span class="cpp1-symbol">;
+
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> main</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> empId</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> allowance</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> basicsalary</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> workedhour</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+string empName</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+</span><span class="cpp1-reservedword">double</span><span class="cpp1-space"> grosssalary</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">tax</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">pension</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> netsalary</span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;\n----- Payroll Calculation -----\n&quot;</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Enter Employee ID: &quot;</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cin </span><span class="cpp1-symbol">&gt;&gt;</span><span class="cpp1-space"> empId</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cin</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">ignore</span><span class="cpp1-symbol">();</span><span class="cpp1-space"> 
+cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Enter Employee Name: &quot;</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+getline</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">cin</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> empName</span><span class="cpp1-symbol">)</span><span class="cpp1-space"> </span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Enter Basic Salary: &quot;</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cin </span><span class="cpp1-symbol">&gt;&gt;</span><span class="cpp1-space"> basicsalary </span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Enter Monthly Allowances: &quot;</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cin </span><span class="cpp1-symbol">&gt;&gt;</span><span class="cpp1-space"> allowance</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+grosssalary </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> basicsalary </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> allowance</span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Enter Daily Worked Hour: &quot;</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cin </span><span class="cpp1-symbol">&gt;&gt;</span><span class="cpp1-space"> workedhour</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+ </span><span class="cpp1-comment">// Based on the new tax proclamination of Ethiopia
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">grosssalary</span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> grosssalary</span><span class="cpp1-symbol">&lt;=</span><span class="cpp1-number">2000</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		tax</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-space"> </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-float">0.00</span><span class="cpp1-space"> </span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		pension</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-float">0.07</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		netsalary</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> tax </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> pension</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		
+	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">grosssalary</span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">2001</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> grosssalary</span><span class="cpp1-symbol">&lt;=</span><span class="cpp1-number">4000</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		tax</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-float">0.15</span><span class="cpp1-space"> </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-float">300.00</span><span class="cpp1-space"> </span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		pension</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-float">0.07</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		netsalary</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> tax </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> pension</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">grosssalary</span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">4001</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> grosssalary</span><span class="cpp1-symbol">&lt;=</span><span class="cpp1-number">7000</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		tax</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-float">0.2</span><span class="cpp1-space"> </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-float">500.00</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		pension</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-float">0.07</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		netsalary</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> tax </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> pension</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">grosssalary</span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">7001</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> grosssalary</span><span class="cpp1-symbol">&lt;=</span><span class="cpp1-number">10000</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		tax</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-float">0.25</span><span class="cpp1-space"> </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-float">850.00</span><span class="cpp1-space"> </span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		pension</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-float">0.07</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		netsalary</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> tax </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> pension</span><span class="cpp1-symbol">;
+
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">grosssalary</span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">10001</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> grosssalary</span><span class="cpp1-symbol">&lt;=</span><span class="cpp1-number">14000</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		tax</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-float">0.3</span><span class="cpp1-space"> </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-float">1350.00</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		pension</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-float">0.07</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		netsalary</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> tax </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> pension</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">grosssalary</span><span class="cpp1-symbol">&gt;</span><span class="cpp1-number">14000</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		tax</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-float">0.35</span><span class="cpp1-space"> </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-float">2050.00</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		pension</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-float">0.07</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		netsalary</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> tax </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> pension</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		
+	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;\n----- Payroll Slip -----\n&quot;</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Employee Name : &quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> empName </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;.&quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Basic Salary: &quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> basicsalary</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot; ETB.&quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Monthly Allowances : &quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> allowance </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot; ETB.&quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Gross Salary : &quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> grosssalary </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot; ETB.&quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Tax: &quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> tax </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot; ETB.&quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> </span><span class="cpp1-comment">//Based on the new proclamination of Ethiopia income tax calculation
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Pension (7%): &quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> pension </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space">  </span><span class="cpp1-string">&quot; ETB.&quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Worked Hour : &quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> workedhour </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot; Hour.&quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;Net Salary : &quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> netsalary </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space">  </span><span class="cpp1-string">&quot; ETB.&quot;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> endl</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+cout </span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-space"> </span><span class="cpp1-string">&quot;\n-------------------------\n&quot;</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> 
+</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-space">	
+</span><span class="cpp1-symbol">}
+</span><span class="cpp1-comment">/*Group members                  ID
+1,Ermias Dinku...........ugr/99124/17
+2,Nebiyu Kassa...........ugr/99369/17
+3,Adoniram Firke.........ugr/100373/17
+4,Mediel Mekonnen........ugr/99247/17
+5,Nardos Emush...........ugr/99356/17
+6,Natnael Legesse........ugr/99366/17
+*/
+</span></span>
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+    <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+    <script src="https://kit.fontawesome.com/d7ea0e3c93.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+      <header>
+    <nav>
+    <a href="index.html"><div class="logo">Ermias</div></a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div style="display:flex; align-items:center; gap:15px;">
+        <button class="theme-btn" id="themeToggle">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="menu-toggle" id="menuToggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <body>
+  <section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+<div class="socialmediacard">
+  <a href="https://www.instagram.com/jeremi_8_24?igsh=anZ5ZXgxNWI5NDI1" class="media1"><i class="fa-brands fa-instagram"></i> <br>jeremi_8_24</a>
+  <a href="https://t.me/jeremi_824" class="media2"><i class="fa-brands fa-telegram"></i><br>jeremi_824</a>
+  <a href="ed8583140@gmail.com" class="media3"><i class="fa-solid fa-at"></i><br>ed8@gmail.com</a>
+</div>
+    <form class="container">
+  <div class="input-container">
+    <input type="text" name="" id="input" required>
+    <label for="input">Full Name</label>
+    <span class="underline"></span>
+  </div>
+  <div class="input-container">
+    <input type="tel" name="" id="input" required>
+    <label for="input">Mobile Number</label>
+    <span class="underline"></span>
+  </div>
+  <div class="input-container">
+    <input type="email" name="" id="input" required>
+    <label for="input">Email</label>
+    <span class="underline"></span>
+  </div>
+      <textarea placeholder="Your Message" rows="20" cols="50"></textarea><br>
+ <input  type="submit" value="Send Message" class="btn">
+    </form>
+  </section>
+<script src="script.js"></script>
+ </body>
+</html>
